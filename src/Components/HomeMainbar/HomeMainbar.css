@@ -90,3 +90,15 @@
 .display-tags-time .display-time {
   font-size: 13px;
 }
+
+@media only screen and (max-width: 980px) {
+  .main-bar {
+    width: calc(100% - 24px);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .main-bar {
+    width: calc(100% - 24px);
+  }
+}

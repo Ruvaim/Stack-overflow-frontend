@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
-import decode from "jwt-decode";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import decode from 'jwt-decode';
 
-import { setCurrentUser } from "../../actions/currentUser";
-import logo from "../../assets/logo-stackoverflow.png";
-import search from "../../assets/magnifying-glass-solid.svg";
-import Avatar from "../../Components/Avatar/Avatar";
-import "./Navbar.css";
+import { setCurrentUser } from '../../actions/currentUser';
+import logo from '../../assets/logo-stackoverflow.png';
+import search from '../../assets/magnifying-glass-solid.svg';
+import Avatar from '../../Components/Avatar/Avatar';
+import './Navbar.css';
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -15,8 +15,8 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    dispatch({ type: "LOGOUT" });
-    navigate("/");
+    dispatch({ type: 'LOGOUT' });
+    navigate('/');
     dispatch(setCurrentUser(null));
   };
 
@@ -28,7 +28,7 @@ const Navbar = () => {
         handleLogout();
       }
     }
-    dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
+    dispatch(setCurrentUser(JSON.parse(localStorage.getItem('Profile'))));
   }, [dispatch]);
 
   return (
@@ -65,10 +65,11 @@ const Navbar = () => {
               borderRadius="50%"
               color="white"
               textDecoration="none"
+              style={{ marginLeft: '10px' }}
             >
               <Link
                 to={`/Users/${User?.result?._id}`}
-                style={{ color: "white", textDecoration: "none" }}
+                style={{ color: 'white', textDecoration: 'none' }}
               >
                 {User.result.name.charAt(0).toUpperCase()}
               </Link>
