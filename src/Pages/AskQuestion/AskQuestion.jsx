@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import "./AskQuestion.css";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { askQuestion } from "../../actions/question.js";
+import React, { useState } from 'react';
+import './AskQuestion.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { askQuestion } from '../../actions/question.js';
 
 const AskQuestion = () => {
-  const [questionTitle, setQuestionTitle] = useState("");
-  const [questionBody, setQuestionBody] = useState("");
-  const [questionTags, setQuestionTags] = useState("");
+  const [questionTitle, setQuestionTitle] = useState('');
+  const [questionBody, setQuestionBody] = useState('');
+  const [questionTags, setQuestionTags] = useState('');
 
   const dispatch = useDispatch();
   const User = useSelector((state) => state.currentUserReducer);
@@ -15,7 +15,6 @@ const AskQuestion = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ questionTitle, questionBody, questionTags });
     dispatch(
       askQuestion(
         {
@@ -31,8 +30,8 @@ const AskQuestion = () => {
   };
 
   const handleEnter = (e) => {
-    if (e.key === "Enter") {
-      setQuestionBody(questionBody + "\n");
+    if (e.key === 'Enter') {
+      setQuestionBody(questionBody + '\n');
     }
   };
 
@@ -80,7 +79,7 @@ const AskQuestion = () => {
                 type="text"
                 id="ask-ques-tags"
                 onChange={(e) => {
-                  setQuestionTags(e.target.value.split(" "));
+                  setQuestionTags(e.target.value.split(' '));
                 }}
                 placeholder="e.g. (xml typescript wordpress)"
               />
