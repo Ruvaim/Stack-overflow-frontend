@@ -5,15 +5,10 @@ import decode from 'jwt-decode';
 
 import { setCurrentUser } from '../../actions/currentUser';
 import logo from '../../assets/logo-stackoverflow.png';
-<<<<<<< HEAD
 import search from '../../assets/magnifying-glass-solid.svg';
 import Avatar from '../../Components/Avatar/Avatar';
-=======
 import logo1 from '../../assets/logo.png';
-import search from '../../assets/magnifying-glass-solid.svg';
-import Avatar from '../../Components/Avatar/Avatar';
 import menu from '../../assets/bars-solid.svg';
->>>>>>> responsive
 import './Navbar.css';
 
 const Navbar = () => {
