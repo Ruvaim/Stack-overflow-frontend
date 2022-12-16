@@ -26,7 +26,7 @@ const QuestionsDetails = () => {
   const dispatch = useDispatch();
   const location = useLocation();
 
-  const url = 'http://localhost:3000';
+  const url = 'https://rk-stack-overflow-clone.onrender.com';
 
   const handlePostAns = (e, answerLength) => {
     e.preventDefault();

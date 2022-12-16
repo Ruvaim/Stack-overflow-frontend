@@ -2,9 +2,13 @@ import axios from 'axios';
 import * as api from '../api';
 
 export const createaPost = async (data) => {
-  await axios.post(`http://localhost:5000/community/create/post`, data, {
-    headers: { 'Content-Type': 'multipart/form-data' },
-  });
+  await axios.post(
+    `https://rk-stack-overflow.onrender.com/community/create/post`,
+    data,
+    {
+      headers: { 'Content-Type': 'multipart/form-data' },
+    }
+  );
 };
 
 export const fetchAllPosts = () => async (dispatch) => {

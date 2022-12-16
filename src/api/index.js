@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-export const API = axios.create({ baseURL: 'http://localhost:5000' });
+export const API = axios.create({
+  baseURL: 'https://rk-stack-overflow.onrender.com',
+});
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('Profile')) {

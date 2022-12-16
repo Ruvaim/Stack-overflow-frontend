@@ -15,7 +15,7 @@ import moment from 'moment';
 const PostDetails = () => {
   const { id } = useParams();
 
-  const url = 'http://localhost:3000';
+  const url = 'https://rk-stack-overflow-clone.onrender.com';
 
   const Posts = useSelector((state) => state.communityReducer);
 
