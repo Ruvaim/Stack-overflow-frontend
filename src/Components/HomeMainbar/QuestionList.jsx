@@ -1,5 +1,5 @@
-import React from "react";
-import Questions from "./Questions";
+import React from 'react';
+import Questions from './Questions';
 
 const QuestionList = ({ questionsList }) => {
   return (

@@ -5,8 +5,15 @@ import decode from 'jwt-decode';
 
 import { setCurrentUser } from '../../actions/currentUser';
 import logo from '../../assets/logo-stackoverflow.png';
+<<<<<<< HEAD
 import search from '../../assets/magnifying-glass-solid.svg';
 import Avatar from '../../Components/Avatar/Avatar';
+=======
+import logo1 from '../../assets/logo.png';
+import search from '../../assets/magnifying-glass-solid.svg';
+import Avatar from '../../Components/Avatar/Avatar';
+import menu from '../../assets/bars-solid.svg';
+>>>>>>> responsive
 import './Navbar.css';
 
 const Navbar = () => {
@@ -18,6 +25,11 @@ const Navbar = () => {
     dispatch({ type: 'LOGOUT' });
     navigate('/');
     dispatch(setCurrentUser(null));
+  };
+
+  const handleMenu = () => {
+    const navbar = document.getElementById('sidebar');
+    navbar.style.left = '0%';
   };
 
   useEffect(() => {
@@ -34,8 +46,14 @@ const Navbar = () => {
   return (
     <nav className="main-nav">
       <div className="navbar">
+        <div>
+          <button onClick={handleMenu} id="menu-btn" className="menu-btn">
+            <img src={menu} alt="" width="18" />
+          </button>
+        </div>
         <Link to="/" className="nav-item nav-logo">
           <img src={logo} alt="logo" className="nav-img" />
+          <img src={logo1} alt="logo" className="nav-img1" />
         </Link>
         <Link to="/" className="nav-item nav-btn">
           About
