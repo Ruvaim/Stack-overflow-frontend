@@ -35,10 +35,6 @@ const Posts = ({ Post }) => {
         <p>{Post.postDesc}</p>
       </div>
       <div className="postImg">
-        <img
-          src={`https://rk-stack-overflow.onrender.com/community/getPost/photo/${Post._id}`}
-          alt=""
-        />
         {Post.photo.contentType === 'image/jpeg' ||
         Post.photo.contentType === 'image/png' ? (
           <img
