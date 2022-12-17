@@ -73,12 +73,10 @@ const PostDetails = () => {
                     <p>{Post.postDesc}</p>
                   </div>
                   <div className="postDetailImg">
-<<<<<<< HEAD
                     <img
                       src={`https://rk-stack-overflow.onrender.com/community/getPost/photo/${Post._id}`}
                       alt=""
                     />
-=======
                     {Post.photo.contentType === 'image/jpeg' ||
                     Post.photo.contentType === 'image/png' ? (
                       <img
@@ -94,7 +92,6 @@ const PostDetails = () => {
                         Your browser does not support the video tag.
                       </video>
                     )}
->>>>>>> responsive
                   </div>
                   <div className="postDetailAction">
                     <div className="postDetailActionBtn">
