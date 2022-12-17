@@ -18,7 +18,6 @@ const PostDetails = () => {
   const url = 'https://rk-stack-overflow-clone.onrender.com';
 
   const Posts = useSelector((state) => state.communityReducer);
-
   var User = useSelector((state) => state.currentUserReducer);
 
   const dispatch = useDispatch();
@@ -74,10 +73,21 @@ const PostDetails = () => {
                     <p>{Post.postDesc}</p>
                   </div>
                   <div className="postDetailImg">
-                    <img
-                      src={`http://localhost:5000/community/getPost/photo/${Post._id}`}
-                      alt=""
-                    />
+                    {Post.photo.contentType === 'image/jpeg' ||
+                    Post.photo.contentType === 'image/png' ? (
+                      <img
+                        src={`https://rk-stack-overflow.onrender.com/community/getPost/photo/${Post._id}`}
+                        alt=""
+                      />
+                    ) : (
+                      <video controls>
+                        <source
+                          src={`https://rk-stack-overflow.onrender.com/community/getPost/photo/${Post._id}`}
+                          type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                      </video>
+                    )}
                   </div>
                   <div className="postDetailAction">
                     <div className="postDetailActionBtn">

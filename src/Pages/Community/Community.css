@@ -115,7 +115,8 @@
   width: 75vw;
   max-height: 400px;
 }
-.postImg img {
+.postImg img,
+.postImg video {
   width: 75vw;
   max-height: 400px;
   object-fit: scale-down;
@@ -177,7 +178,8 @@
   width: 75vw;
   max-height: 400px;
 }
-.postDetailImg img {
+.postDetailImg img,
+.postDetailImg video {
   width: 75vw;
   max-height: 400px;
   object-fit: scale-down;
