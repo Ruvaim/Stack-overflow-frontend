@@ -75,7 +75,7 @@ const PostDetails = () => {
                   </div>
                   <div className="postDetailImg">
                     <img
-                      src={`http://localhost:5000/community/getPost/photo/${Post._id}`}
+                      src={`https://rk-stack-overflow.onrender.com/community/getPost/photo/${Post._id}`}
                       alt=""
                     />
                   </div>

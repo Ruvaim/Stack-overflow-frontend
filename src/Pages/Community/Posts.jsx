@@ -36,7 +36,7 @@ const Posts = ({ Post }) => {
       </div>
       <div className="postImg">
         <img
-          src={`http://localhost:5000/community/getPost/photo/${Post._id}`}
+          src={`https://rk-stack-overflow.onrender.com/community/getPost/photo/${Post._id}`}
           alt=""
         />
       </div>
