@@ -4,7 +4,7 @@ const Chat = () => {
   useEffect(() => {
     (function (d, m) {
       var kommunicateSettings = {
-        appId: '34a578aa29262d00a300010635e82f316',
+        appId: process.env.REACT_APP_CHAT_ID,
         popupWidget: true,
         automaticChatOpenOnNavigation: true,
       };
