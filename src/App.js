@@ -22,7 +22,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Chat />
         <Navbar />
         <AllRoutes />
       </Router>
