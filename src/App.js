@@ -7,7 +7,6 @@ import { fetchAllQuestions } from './actions/question';
 import { fetchAllUsers } from './actions/users';
 import AllRoutes from './AllRoutes';
 import './App.css';
-import Chat from './Components/Chat/Chat';
 import Navbar from './Components/Navbar/Navbar';
 
 function App() {
